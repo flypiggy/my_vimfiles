@@ -1,5 +1,5 @@
 "use neobundle mange the vim plugins
-source ~/.vim/neobundles.vim
+source ~/.vim/NeoBundles.vim
 
 syntax on
 filetype plugin indent on
