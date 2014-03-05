@@ -53,7 +53,7 @@ nnoremap <TAB> :bn<CR>
 nnoremap <S-TAB> :tabnext<CR>
 nnoremap <S-L> :nohls<CR>
 nnoremap Y y$
-nnoremap <Leader>f :CtrlSF<CR>
+nnoremap <Leader>f :CtrlSF
 "key mapping for window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
@@ -64,6 +64,7 @@ inoremap <C-j> <Up>
 inoremap <C-k> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+noremap <F8> :TagbarToggle<CR>
 
 "map language
 autocmd FileType sml map <F5> :!sml % < /dev/null <CR>
