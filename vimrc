@@ -66,6 +66,10 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 noremap <F8> :TagbarToggle<CR>
 
+"easymotion
+nmap s <Plug>(easymotion-s2)
+let g:EasyMotion_use_upper = 1
+
 "map language
 autocmd FileType sml map <F5> :!sml % < /dev/null <CR>
 autocmd FileType sml map <F6> :!sml % <CR>
