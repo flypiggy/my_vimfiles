@@ -76,6 +76,17 @@ autocmd FileType sml set ts=4 | set sw=4
 noremap <F4> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.swp$']
 
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+    set clipboard=unnamed
+    set lines=50 columns=180
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
