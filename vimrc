@@ -32,7 +32,7 @@ set wrap linebreak nolist "自动换行不断开单词
 
 set t_Co=256
 colorscheme molokai
-let mapleader = '.'
+let mapleader = ','
 
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
@@ -45,6 +45,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 "unite
 nnoremap <C-p> :Unite -start-insert file_rec/async:!<CR>
+nnoremap <Leader>m :Unite -start-insert file_mru<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 
