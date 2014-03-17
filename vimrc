@@ -34,6 +34,7 @@ set t_Co=256
 colorscheme molokai
 let mapleader = ','
 
+"剪贴模式
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
@@ -49,12 +50,14 @@ nnoremap <Leader>m :Unite -start-insert file_mru<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 
-"快捷键映射
+"快捷键映
 nnoremap <TAB> :bn<CR>
 nnoremap <S-TAB> :tabnext<CR>
 nnoremap <S-L> :nohls<CR>
-nnoremap Y y$
 nnoremap <Leader>f :CtrlSF
+vnoremap Y "*y"
+nnoremap <Leader>p "*p"
+
 "key mapping for window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
@@ -81,7 +84,6 @@ if has("gui_running")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
-    set clipboard=unnamed
     set lines=50 columns=180
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
