@@ -24,6 +24,7 @@ set nofoldenable "不要自动折叠
 
 set ignorecase "忽略搜索大小写
 set smartcase
+set mouse=a
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
