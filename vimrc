@@ -52,8 +52,8 @@ let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 
 "快捷键映
-nnoremap <TAB> :bn<CR>
-nnoremap <S-TAB> :tabnext<CR>
+nnoremap <TAB><TAB> :tabnext<CR>
+nnoremap <S-TAB> :bn<CR>
 nnoremap <S-L> :nohls<CR>
 nnoremap <Leader>f :CtrlSF
 vnoremap Y "*y"
