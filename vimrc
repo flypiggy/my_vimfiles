@@ -51,6 +51,7 @@ nnoremap <Leader>m :Unite -start-insert file_mru<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 
+let g:vim_markdown_folding_disabled=1
 "快捷键映
 nnoremap <TAB><TAB> :tabnext<CR>
 nnoremap <S-TAB> :bn<CR>
