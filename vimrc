@@ -53,8 +53,8 @@ let g:unite_split_rule = 'botright'
 
 let g:vim_markdown_folding_disabled=1
 "快捷键映
-nnoremap <TAB><TAB> :tabnext<CR>
-nnoremap <S-TAB> :bn<CR>
+nnoremap <TAB> :bn<CR>
+nnoremap <S-TAB> :tabnext<CR>
 nnoremap <S-L> :nohls<CR>
 nnoremap <Leader>f :CtrlSF
 vnoremap Y "*y"
