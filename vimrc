@@ -86,7 +86,7 @@ if has("gui_running")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
-    set lines=50 columns=180
+    set lines=999 columns=999
     set guioptions-=r
     set guioptions-=L
   elseif has("gui_win32")
