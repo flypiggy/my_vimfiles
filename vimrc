@@ -59,6 +59,7 @@ nnoremap <S-L> :nohls<CR>
 nnoremap <Leader>f :CtrlSF
 vnoremap Y "*y"
 nnoremap <Leader>p "*p"
+map <Leader>ch :call SetColorColumn()<CR>
 
 "key mapping for window navigation
 nmap <C-h> <C-w>h
@@ -93,6 +94,16 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+"对齐线
+function! SetColorColumn()
+  let col_num = virtcol(".")
+  let cc_list = split(&cc, ',')
+  if count(cc_list, string(col_num)) <= 0
+    execute "set cc+=".col_num
+  else
+    execute "set cc-=".col_num
+  endif
+endfunction
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
