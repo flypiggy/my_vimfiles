@@ -59,6 +59,7 @@ nnoremap <S-L> :nohls<CR>
 nnoremap <Leader>f :CtrlSF
 vnoremap Y "*y"
 nnoremap <Leader>p "*p"
+nnoremap P "0p"
 map <Leader>ch :call SetColorColumn()<CR>
 
 "key mapping for window navigation

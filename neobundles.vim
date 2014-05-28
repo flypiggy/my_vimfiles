@@ -25,8 +25,6 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'sjl/gundo.vim'
 "补全括号
 NeoBundle 'Raimondi/delimitMate'
-"粘贴历史记录
-NeoBundle 'vim-scripts/YankRing.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'majutsushi/tagbar'
 "语法类
