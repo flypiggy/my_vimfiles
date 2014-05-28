@@ -71,12 +71,14 @@ inoremap <C-j> <Up>
 inoremap <C-k> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+
+nnoremap <F5> :GundoToggle<CR>
 noremap <F8> :TagbarToggle<CR>
 
 "map language
-autocmd FileType sml map <F5> :!sml % < /dev/null <CR>
-autocmd FileType sml map <F6> :!sml % <CR>
-autocmd FileType sml set ts=4 | set sw=4
+" autocmd FileType sml map <F5> :!sml % < /dev/null <CR>
+" autocmd FileType sml map <F6> :!sml % <CR>
+" autocmd FileType sml set ts=4 | set sw=4
 
 "NERDTree settings
 noremap <F4> :NERDTreeToggle<CR>
