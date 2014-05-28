@@ -12,14 +12,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
 NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/The-NERD-tree'
@@ -29,15 +21,16 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'honza/vim-snippets'
 NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'sjl/gundo.vim'
+"补全括号
 NeoBundle 'Raimondi/delimitMate'
+"粘贴历史记录
+NeoBundle 'vim-scripts/YankRing.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'majutsushi/tagbar'
+"语法类
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'Keithbsmiley/rspec.vim'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'sjl/gundo.vim'
+NeoBundle 'plasticboy/vim-markdown'

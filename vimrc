@@ -46,7 +46,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 "unite
-nnoremap <C-p> :Unite -start-insert file_rec/async:!<CR>
+nnoremap <C-p> :Unite -start-insert file_rec<CR>
 nnoremap <Leader>m :Unite -start-insert file_mru<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
