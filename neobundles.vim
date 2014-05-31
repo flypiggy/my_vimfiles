@@ -23,6 +23,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'SirVer/ultisnips'
 "补全括号
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'terryma/vim-multiple-cursors'
