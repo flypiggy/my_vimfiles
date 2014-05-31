@@ -17,7 +17,6 @@ set ai  "自动缩进
 set showcmd
 set encoding=utf-8
 set backspace=indent,eol,start
-set runtimepath+=~/.vim/snippets
 
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
@@ -36,6 +35,14 @@ set t_Co=256
 colorscheme molokai
 let mapleader = ','
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
 "剪贴模式
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
@@ -48,7 +55,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 "UltiSnips
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir="~/.vim/snippets/UltiSnips"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
