@@ -60,8 +60,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "unite
-nnoremap <C-p> :Unite -start-insert file_rec<CR>
-nnoremap <Leader>m :Unite -start-insert file_mru<CR>
+nnoremap <C-p> :Unite -start-insert -prompt-direction="top" file_rec<CR>
+nnoremap <Leader>m :Unite -start-insert -prompt-direction="top" file_mru<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 
