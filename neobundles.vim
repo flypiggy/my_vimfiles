@@ -22,11 +22,9 @@ NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'sjl/gundo.vim'
 NeoBundle 'SirVer/ultisnips'
 "补全括号
 NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'majutsushi/tagbar'
 "语法类
 NeoBundle 'tpope/vim-haml'
