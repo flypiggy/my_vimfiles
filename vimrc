@@ -39,6 +39,18 @@ let mapleader = ','
 set rnu
 set cursorline
 
+"When move around keep cursor center fo the screen
+nnoremap } }zz
+nnoremap { {zz
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap <c-d> <c-d>zz
+nnoremap <c-u> <c-u>zz
+
+"use gj gk instead of jk
+nnoremap j gj
+nnoremap k gk
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
