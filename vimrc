@@ -30,6 +30,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 set showbreak=...
 set wrap linebreak nolist "自动换行不断开单词
+set whichwrap+=<,>,h,l
 
 set t_Co=256
 colorscheme molokai
