@@ -35,6 +35,10 @@ set t_Co=256
 colorscheme molokai
 let mapleader = ','
 
+"Sets line relative numbers
+set rnu
+set cursorline
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -121,6 +125,7 @@ function! SetColorColumn()
     execute "set cc-=".col_num
   endif
 endfunction
+
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
