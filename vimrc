@@ -69,6 +69,8 @@ set pastetoggle=<F2>
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_min_count = 2
 
 "UltiSnips
 let g:UltiSnipsEditSplit="vertical"
@@ -83,9 +85,10 @@ let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 
 let g:vim_markdown_folding_disabled=1
+
 "快捷键映
-nnoremap <TAB> :bn<CR>
-nnoremap <S-TAB> :tabnext<CR>
+nnoremap <TAB><TAB> :tabnext<CR>
+nnoremap <Leader>tn :tabnew<CR>
 nnoremap <S-L> :nohls<CR>
 nnoremap <Leader>f :CtrlSF
 vnoremap Y "*y"
