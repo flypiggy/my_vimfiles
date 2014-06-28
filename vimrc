@@ -107,7 +107,6 @@ inoremap <C-k> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
-nnoremap <F5> :GundoToggle<CR>
 noremap <F8> :TagbarToggle<CR>
 
 "map language
@@ -123,7 +122,11 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
+    if hostname() == "ligan"
+      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+    else
+      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
+    endif
     set lines=999 columns=999
     set guioptions-=r
     set guioptions-=L
