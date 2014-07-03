@@ -90,9 +90,6 @@ let g:vim_markdown_folding_disabled=1
 nnoremap <TAB><TAB> :tabnext<CR>
 nnoremap <Leader>tn :tabnew<CR>
 nnoremap <S-L> :nohls<CR>
-nnoremap <Leader>f :CtrlSF
-vnoremap Y "*y"
-nnoremap <Leader>p "*p"
 nnoremap P "0p"
 map <Leader>ch :call SetColorColumn()<CR>
 
