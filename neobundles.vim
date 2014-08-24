@@ -28,6 +28,7 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'majutsushi/tagbar'
 "语法类
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Keithbsmiley/rspec.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'plasticboy/vim-markdown'
