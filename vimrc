@@ -125,7 +125,7 @@ if has("gui_running")
     if hostname() == "ligan"
       set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
     else
-      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
+      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
     endif
     set lines=999 columns=999
     set guioptions-=r
