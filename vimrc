@@ -123,7 +123,7 @@ if has("gui_running")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
     if hostname() == "ligan"
-      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
     else
       set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
     endif
