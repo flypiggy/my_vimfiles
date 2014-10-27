@@ -4,6 +4,8 @@ source ~/.vim/NeoBundles.vim
 syntax on
 filetype plugin indent on
 
+NeoBundleCheck
+
 "基本设置
 set timeoutlen=300                                  "mapping timeout
 set ttimeoutlen=50                                  "keycode timeout

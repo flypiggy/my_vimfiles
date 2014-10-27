@@ -1,3 +1,5 @@
+if !1 | finish | endif
+
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
@@ -6,7 +8,7 @@ if has('vim_starting')
 endif
 
 " Required:
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -32,3 +34,5 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Keithbsmiley/rspec.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'plasticboy/vim-markdown'
+
+call neobundle#end()
