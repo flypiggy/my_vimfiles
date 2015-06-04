@@ -88,6 +88,9 @@ let g:unite_split_rule = 'botright'
 
 let g:vim_markdown_folding_disabled=1
 
+" add jbuilder syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
 "快捷键映
 nnoremap <TAB><TAB> :tabnext<CR>
 nnoremap <Leader>tn :tabnew<CR>
