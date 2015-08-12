@@ -114,6 +114,11 @@ inoremap <C-l> <Right>
 
 noremap <F8> :TagbarToggle<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 "map language
 " autocmd FileType sml map <F5> :!sml % < /dev/null <CR>
 " autocmd FileType sml map <F6> :!sml % <CR>

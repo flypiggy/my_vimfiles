@@ -25,8 +25,11 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'junegunn/vim-easy-align'
+
 "补全括号
 NeoBundle 'Raimondi/delimitMate'
+
 NeoBundle 'majutsushi/tagbar'
 "语法类
 NeoBundle 'tpope/vim-haml'
