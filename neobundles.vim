@@ -19,6 +19,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/The-NERD-tree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'dyng/ctrlsf.vim'
 NeoBundle 'Shougo/unite.vim'

@@ -91,6 +91,10 @@ let g:vim_markdown_folding_disabled=1
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
+" gist-vim
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
+
 "快捷键映
 nnoremap <TAB><TAB> :tabnext<CR>
 nnoremap <Leader>tn :tabnew<CR>
@@ -132,11 +136,11 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
-    if hostname() == "ligan"
-      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
-    else
-      set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
-    endif
+    " if hostname() == "ligan"
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h15
+    " else
+    "   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
+    " endif
     set lines=999 columns=999
     set guioptions-=r
     set guioptions-=L
