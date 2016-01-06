@@ -19,6 +19,7 @@ set ai  "自动缩进
 set showcmd
 set encoding=utf-8
 set backspace=indent,eol,start
+set colorcolumn=100
 
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
@@ -81,8 +82,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "unite
-nnoremap <C-p> :Unite -start-insert -prompt-direction="top" file_rec<CR>
-nnoremap <Leader>m :Unite -start-insert -prompt-direction="top" file_mru<CR>
+nnoremap <C-p> :Unite file_rec -start-insert -prompt-direction=top<CR>
+nnoremap <Leader>m :Unite file_mru -start-insert -prompt-direction=top<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 
