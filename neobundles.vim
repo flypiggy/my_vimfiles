@@ -37,6 +37,9 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Keithbsmiley/rspec.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+
+"markdown 支持
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'itspriddle/vim-marked'
 
 call neobundle#end()
