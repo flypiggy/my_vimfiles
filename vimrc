@@ -82,10 +82,11 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "unite
-nnoremap <C-p> :Unite file_rec -start-insert -prompt-direction=top<CR>
-nnoremap <Leader>m :Unite file_mru -start-insert -prompt-direction=top<CR>
+nnoremap <C-p> :Unite file_rec/async -start-insert -prompt-direction=top<CR>
+nnoremap <Leader>m :Unite file_mru/async -start-insert -prompt-direction=top<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
+let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 
 let g:vim_markdown_folding_disabled=1
 

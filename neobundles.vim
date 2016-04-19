@@ -22,11 +22,22 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'dyng/ctrlsf.vim'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'tpope/vim-surround'
+" Unite
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make',
+      \     'linux' : 'make',
+      \     'unix' : 'gmake',
+      \    },
+      \ }
 
 "补全括号
 NeoBundle 'Raimondi/delimitMate'
