@@ -13,6 +13,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
+
 " My Bundles here:
 NeoBundle 'bling/vim-airline'
 NeoBundle 'tpope/vim-fugitive'
@@ -27,6 +28,8 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-ruby/vim-ruby'
+
 " Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc.vim', {

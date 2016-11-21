@@ -43,6 +43,9 @@ let mapleader = ','
 set rnu
 set cursorline
 
+" add syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
 "When move around keep cursor center fo the screen
 nnoremap } }zz
 nnoremap { {zz
@@ -83,15 +86,12 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "unite
 nnoremap <C-p> :Unite file_rec/async -start-insert -prompt-direction=top<CR>
-nnoremap <Leader>m :Unite file_mru/async -start-insert -prompt-direction=top<CR>
+nnoremap <Leader>m :Unite file_mru -start-insert -prompt-direction=top<CR>
 let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 
 let g:vim_markdown_folding_disabled=1
-
-" add jbuilder syntax highlighting
-au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
 " gist-vim
 let g:gist_show_privates = 1
@@ -101,7 +101,6 @@ let g:gist_post_private = 1
 nnoremap <TAB><TAB> :tabnext<CR>
 nnoremap <Leader>tn :tabnew<CR>
 nnoremap <S-L> :nohls<CR>
-nnoremap <Leader>f :CtrlSF
 vnoremap Y "*y"
 nnoremap <Leader>p "*p"
 nnoremap P "0p"
@@ -130,6 +129,15 @@ nmap ga <Plug>(EasyAlign)
 " autocmd FileType sml map <F6> :!sml % <CR>
 " autocmd FileType sml set ts=4 | set sw=4
 
+"CtrlSF settings
+nnoremap <Leader>f :CtrlSF
+nnoremap <Leader>t :CtrlSFToggle<CR>
+let g:ctrlsf_default_root = 'project'
+let g:ctrlsf_mapping = {
+    \ "next": "n",
+    \ "prev": "N",
+    \ }
+
 "NERDTree settings
 noremap <F4> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.swp$']
@@ -139,7 +147,7 @@ if has("gui_running")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
     " if hostname() == "ligan"
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h15
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
     " else
     "   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
     " endif
