@@ -29,6 +29,7 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'terryma/vim-multiple-cursors'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'

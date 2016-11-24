@@ -91,6 +91,9 @@ let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
 
+"vim-multiple-cursors
+let g:multi_cursor_start_key='<F6>'
+
 let g:vim_markdown_folding_disabled=1
 
 " gist-vim
