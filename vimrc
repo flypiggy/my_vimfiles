@@ -1,10 +1,16 @@
-"use neobundle mange the vim plugins
-source ~/.vim/NeoBundles.vim
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Initialize plugin system
+call plug#end()
 
 syntax on
 filetype plugin indent on
-
-NeoBundleCheck
 
 "基本设置
 set timeoutlen=300                                  "mapping timeout
