@@ -1,9 +1,14 @@
-" Specify a directory for plugins
+"unite Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'dyng/ctrlsf.vim'
+Plug 'tpope/vim-commentary'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Initialize plugin system
@@ -77,6 +82,10 @@ nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
 
+" Disable q
+nnoremap q <nop>
+nnoremap Q <nop>
+
 "airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -90,21 +99,16 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-"unite
-nnoremap <C-p> :Unite file_rec/async -start-insert -prompt-direction=top<CR>
-nnoremap <Leader>m :Unite file_mru -start-insert -prompt-direction=top<CR>
-let g:unite_winheight = 10
-let g:unite_split_rule = 'botright'
-let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 "vim-multiple-cursors
 let g:multi_cursor_start_key='<F6>'
 
 let g:vim_markdown_folding_disabled=1
-
-" gist-vim
-let g:gist_show_privates = 1
-let g:gist_post_private = 1
 
 "快捷键映
 nnoremap <TAB><TAB> :tabnext<CR>
@@ -142,6 +146,9 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <Leader>f :CtrlSF
 nnoremap <Leader>t :CtrlSFToggle<CR>
 let g:ctrlsf_default_root = 'project'
+let g:ctrlsf_auto_focus = {
+    \ "at": "start"
+    \ }
 let g:ctrlsf_mapping = {
     \ "next": "n",
     \ "prev": "N",
