@@ -106,7 +106,20 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:ctrlp_user_command = {
+\    'types': {
+\      1: [
+\        '.git',
+\        'cd %s &&
+\         git ls-files . -co --exclude-standard
+\         | awk ''{ print length, $0 }''
+\         | sort -n -s
+\         | cut -d" " -f2-'
+\      ],
+\    },
+\    'fallback': 'find %s -type f'
+\  }
 
 "vim-multiple-cursors
 let g:multi_cursor_start_key='<F6>'
