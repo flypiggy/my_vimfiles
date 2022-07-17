@@ -12,6 +12,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Initialize plugin system
@@ -103,6 +104,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "CtrlP
+nnoremap <C-m> :CtrlPMRU<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
@@ -153,6 +155,14 @@ vmap <Enter> <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+"ale
+let g:ale_fixers = {
+      \   'javascript': ['prettier'],
+      \   'css': ['prettier'],
+      \   'ruby': ['prettier']
+      \}
+let g:ale_fix_on_save = 1
+
 "map language
 " autocmd FileType sml map <F5> :!sml % < /dev/null <CR>
 " autocmd FileType sml map <F6> :!sml % <CR>
@@ -162,6 +172,7 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <Leader>f :CtrlSF
 nnoremap <Leader>t :CtrlSFToggle<CR>
 let g:ctrlsf_default_root = 'project'
+" let g:ctrlsf_ignore_dir = ['bower_components', 'node_modules', 'spec']
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
     \ }
@@ -179,7 +190,7 @@ if has("gui_running")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
     " if hostname() == "ligan"
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
+    set guifont=Hack\ Nerd\ Font\ Mono:h13
     " else
     "   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h16
     " endif
